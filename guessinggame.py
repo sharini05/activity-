@@ -31,7 +31,7 @@ def handle_guess(guess):
             st.warning(" Too high! Try again.")
         else:
             st.success(" Congratulations! You've guessed the number!")
-            reset_game()
+            
 
         if st.session_state.attempts == 0:
             st.error(f" Game Over! The secret number was {st.session_state.secret_number}.")
