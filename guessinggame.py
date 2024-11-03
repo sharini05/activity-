@@ -1,4 +1,3 @@
-
 import streamlit as st
 import random
 
@@ -12,7 +11,7 @@ def main():
 
     st.write(f" You have {st.session_state.attempts} attempts left.")
     
-    guess = st.number_input("Enter your guess:", min_value=10, max_value=99, step=1)
+    guess = st.number_input("Enter your guess:", min_value=10, max_value=99)
 
     if st.button("Submit Guess"):
         handle_guess(guess)
