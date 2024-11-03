@@ -6,7 +6,7 @@ def main():
     st.title("Guess the Number Game")
 
     if "secret_number" not in st.session_state:
-        st.session_state.secret_number = random.randint(1, 100)
+        st.session_state.secret_number = random.randint(10, 99)
         st.session_state.attempts = 10
         st.session_state.guesses = []
 
