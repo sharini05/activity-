@@ -25,16 +25,17 @@ def handle_guess(guess):
         st.session_state.attempts -= 1
 
         if guess < st.session_state.secret_number:
-            st.warning(" Too low! Try again.")
+            st.write(" Too low! Try again.")
         elif guess > st.session_state.secret_number:
-            st.warning(" Too high! Try again.")
+            st.write(" Too high! Try again.")
         else:
-            st.success(" Congratulations! You've guessed the number!")
+            st.write(" Congratulations! You've guessed the number!")
             
 
         if st.session_state.attempts == 0:
-            st.error(f" Game Over! The secret number was {st.session_state.secret_number}.")
+            st.write(f" Game Over! The secret number was {st.session_state.secret_number}.")
             
 
 if __name__ == "__main__":
     main()
+
